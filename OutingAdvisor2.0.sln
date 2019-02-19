@@ -1,0 +1,17 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OutingAdvisor2.0", "OutingAdvisor2.0\OutingAdvisor2.0.csproj", "{5784528D-462C-435B-BC0E-36047F44F824}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5784528D-462C-435B-BC0E-36047F44F824}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5784528D-462C-435B-BC0E-36047F44F824}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5784528D-462C-435B-BC0E-36047F44F824}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5784528D-462C-435B-BC0E-36047F44F824}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

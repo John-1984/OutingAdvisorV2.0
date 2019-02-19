@@ -1,0 +1,85 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="5000">
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+        <li data-target="#myCarousel" data-slide-to="4"></li>
+        <li data-target="#myCarousel" data-slide-to="5"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <a asp-area="" asp-controller="Location" asp-action="Index" asp-route-identity="10">
+                <img src="~/images/locationImages/joe-beck-23483-unsplash.jpg" alt="ASP.NET" class="img-responsive img-carousel-resize" />
+                <div class="carousel-caption" role="option">
+                    <p>
+                        The Tower.
+                    </p>
+                </div>
+            </a>
+        </div>
+        <div class="item">
+            <a asp-area="" asp-controller="Location" asp-action="Index" asp-route-identity="11">
+                <img src="~/images/locationImages/magdalena-photography-1346045-unsplash.jpg" alt="Visual Studio" class="img-responsive img-carousel-resize" />
+                <div class="carousel-caption" role="option">
+                    <p>
+                        The Blue Lagoon.
+                    </p>
+                </div>
+            </a>
+        </div>
+        <div class="item">
+            <a asp-area="" asp-controller="Location" asp-action="Index">
+                <img src="~/images/locationImages/oswaldo-martinez-1154176-unsplash.jpg" alt="Package Management" class="img-responsive img-carousel-resize" />
+                <div class="carousel-caption" role="option">
+                    <p>
+                        Sanfrancisco Bay.
+                    </p>
+                </div>
+            </a>
+        </div>
+        <div class="item">
+            <a asp-area="" asp-controller="Location" asp-action="Index">
+                <img src="~/images/locationImages/petr-sevcovic-594807-unsplash.jpg" alt="Microsoft Azure" class="img-responsive img-carousel-resize" />
+                <div class="carousel-caption" role="option">
+                    <p>
+                        Golden Cafe in Peru.
+                    </p>
+                </div>
+            </a>
+        </div>
+        <div class="item">
+            <a asp-area="" asp-controller="Location" asp-action="Index"s>
+                <img src="~/images/locationImages/robert-lukeman-128794-unsplash.jpg" alt="Microsoft Azure" class="img-responsive img-carousel-resize" />
+                <div class="carousel-caption" role="option">
+                    <p>
+                        The Valley of Life in Argentina
+                    </p>
+                </div>
+            </a>
+        </div>
+        <div class="item">
+            <a asp-area="" asp-controller="Location" asp-action="Index">
+                <img src="~/images/locationImages/the-roaming-platypus-311630-unsplash.jpg" alt="Microsoft Azure" class="img-responsive img-carousel-resize" />
+                <div class="carousel-caption" role="option">
+                    <p>
+                        The Tower of Life in Brazil.
+                    </p>
+                </div>
+            </a>
+        </div>
+    </div>
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+

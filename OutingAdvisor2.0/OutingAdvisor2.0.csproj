@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\images\locationImages\" />
+    <Folder Include="Views\Location\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="wwwroot\images\locationImages\joe-beck-23483-unsplash.jpg" />
+    <Content Remove="wwwroot\images\locationImages\magdalena-photography-1346045-unsplash.jpg" />
+    <Content Remove="wwwroot\images\locationImages\oswaldo-martinez-1154176-unsplash.jpg" />
+    <Content Remove="wwwroot\images\locationImages\petr-sevcovic-594807-unsplash.jpg" />
+    <Content Remove="wwwroot\images\locationImages\robert-lukeman-128794-unsplash.jpg" />
+    <Content Remove="wwwroot\images\locationImages\the-roaming-platypus-311630-unsplash.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="wwwroot\images\locationImages\joe-beck-23483-unsplash.jpg" />
+    <None Include="wwwroot\images\locationImages\magdalena-photography-1346045-unsplash.jpg" />
+    <None Include="wwwroot\images\locationImages\oswaldo-martinez-1154176-unsplash.jpg" />
+    <None Include="wwwroot\images\locationImages\petr-sevcovic-594807-unsplash.jpg" />
+    <None Include="wwwroot\images\locationImages\robert-lukeman-128794-unsplash.jpg" />
+    <None Include="wwwroot\images\locationImages\the-roaming-platypus-311630-unsplash.jpg" />
+  </ItemGroup>
+</Project>
