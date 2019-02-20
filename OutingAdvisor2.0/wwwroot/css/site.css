@@ -35,7 +35,16 @@
 }
 
 .img-carousel-resize{
-    height:100vh !important;
+    height:95vh !important;
     width:100% !important;
     text-align:center;
 }
+
+.img-carousel-location-resize {
+    height: 30vh !important;
+    width: 100% !important;
+    text-align: center;
+}
+
+
+
