@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace OutingAdvisor2._0
+namespace OutingAdvisorV2
 {
     public class Startup
     {

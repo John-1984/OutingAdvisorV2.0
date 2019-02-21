@@ -4,9 +4,9 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using OutingAdvisor2._0.Models;
+using OutingAdvisorV2.Models;
 
-namespace OutingAdvisor2._0.Controllers
+namespace OutingAdvisorV2.Controllers
 {
     public class HomeController : Controller
     {

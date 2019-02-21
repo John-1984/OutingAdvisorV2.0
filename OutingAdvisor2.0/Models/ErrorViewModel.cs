@@ -1,6 +1,6 @@
-using System;
+﻿using System;
 
-namespace OutingAdvisor2._0.Models
+namespace OutingAdvisorV2.Models
 {
     public class ErrorViewModel
     {
