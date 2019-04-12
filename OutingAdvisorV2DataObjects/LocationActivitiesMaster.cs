@@ -6,5 +6,9 @@ namespace OutingAdvisorV2DataObjects
         public LocationActivitiesMaster()
         {
         }
+
+        public int Identity { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
     }
 }
