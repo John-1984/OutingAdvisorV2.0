@@ -27,12 +27,24 @@
     <Content Remove="wwwroot\images\locationImages\the-roaming-platypus-311630-unsplash.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="wwwroot\images\locationImages\joe-beck-23483-unsplash.jpg" />
-    <None Include="wwwroot\images\locationImages\magdalena-photography-1346045-unsplash.jpg" />
-    <None Include="wwwroot\images\locationImages\oswaldo-martinez-1154176-unsplash.jpg" />
-    <None Include="wwwroot\images\locationImages\petr-sevcovic-594807-unsplash.jpg" />
-    <None Include="wwwroot\images\locationImages\robert-lukeman-128794-unsplash.jpg" />
-    <None Include="wwwroot\images\locationImages\the-roaming-platypus-311630-unsplash.jpg" />
+    <None Include="wwwroot\images\locationImages\joe-beck-23483-unsplash.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="wwwroot\images\locationImages\magdalena-photography-1346045-unsplash.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="wwwroot\images\locationImages\oswaldo-martinez-1154176-unsplash.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="wwwroot\images\locationImages\petr-sevcovic-594807-unsplash.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="wwwroot\images\locationImages\robert-lukeman-128794-unsplash.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="wwwroot\images\locationImages\the-roaming-platypus-311630-unsplash.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Content Update="Views\_ViewStart.cshtml">
