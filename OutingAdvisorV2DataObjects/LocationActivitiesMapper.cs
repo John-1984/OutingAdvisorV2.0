@@ -18,5 +18,8 @@ namespace OutingAdvisorV2DataObjects
         public int LocationID { get; set; }
         [Required]
         public int ActivityID { get; set; }
+
+        [ForeignKey("LocationID")]
+        public Location Location { get; set; }
     }
 }

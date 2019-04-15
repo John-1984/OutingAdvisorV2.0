@@ -25,6 +25,9 @@ namespace OutingAdvisorV2DataObjects
         [ForeignKey("TypeID")]
         public LocationTypeMaster LocationTypeMaster { get; set; }
 
+        [ForeignKey("LocationID")]
+        public Location Location { get; set; }
+
         void IRowVersionIncrementer.OnSavingChanges()
         {
             RowVersion ++;

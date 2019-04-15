@@ -24,9 +24,8 @@ namespace OutingAdvisorV2DataObjects
         [ConcurrencyCheck]
         public long RowVersion { get; set; }
 
-        [ForeignKey("LocationID")]
         public ICollection<LocationActivitiesMapper> LocationActivitiesMapper { get; set; }
-        [ForeignKey("LocationID")]
+
         public LocationDetails LocationDetails { get; set; }
 
         void IRowVersionIncrementer.OnSavingChanges()
