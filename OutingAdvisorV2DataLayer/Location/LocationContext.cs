@@ -1,8 +1,8 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
-using OutingAdvisorV2DataObjects;
+using DO = OutingAdvisorV2DataObjects;
 
-namespace OutingAdvisorV2DataLayer
+namespace OutingAdvisorV2DataLayer.Location
 {
     public class LocationContext: DbContext
     {
@@ -12,17 +12,17 @@ namespace OutingAdvisorV2DataLayer
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseMySQL(@"Server=.\SQLEXPRESS;Database=SchoolDB;Trusted_Connection=True;");
+            optionsBuilder.UseMySql(@"server=localhost;port=3306;database=OutingAdvisorV2;uid=root;password=password;");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
         }
         //entities
-        public DbSet<Location> Location { get; set; }
-        public DbSet<LocationActivitiesMapper> LocationActivitiesMapper { get; set; }
-        public DbSet<LocationActivitiesMaster> LocationActivitiesMaster { get; set; }
-        public DbSet<LocationDetails> LocationDetails { get; set; }
-        public DbSet<LocationTypeMaster> LocationTypeMaster { get; set; }
+        public DbSet<DO.Location> Location { get; set; }
+        public DbSet<DO.LocationActivitiesMapper> LocationActivitiesMapper { get; set; }
+        public DbSet<DO.LocationActivitiesMaster> LocationActivitiesMaster { get; set; }
+        public DbSet<DO.LocationDetails> LocationDetails { get; set; }
+        public DbSet<DO.LocationTypeMaster> LocationTypeMaster { get; set; }
     }
 }
