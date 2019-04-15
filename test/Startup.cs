@@ -14,10 +14,11 @@ using Microsoft.Extensions.Options;
 namespace test
 {
     public class Startup
-    {
+    { 
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+
         }
 
         public IConfiguration Configuration { get; }
