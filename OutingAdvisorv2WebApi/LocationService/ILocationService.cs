@@ -9,5 +9,6 @@ namespace OutingAdvisorv2WebApi.LocationService
         bool Update(DO.Location location);
         bool Delete(DO.Location location);
         bool Insert(DO.Location location);
+
     }
 }

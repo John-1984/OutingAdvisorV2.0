@@ -11,6 +11,7 @@ namespace OutingAdvisorv2WebApi.LocationService
         public LocationService(DAL.ILocation locationDAL)
         {
             _locationDAL = locationDAL;
+        
         }
 
         bool ILocationService.Delete(DO.Location location)

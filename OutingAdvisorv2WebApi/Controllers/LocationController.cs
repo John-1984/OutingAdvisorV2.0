@@ -1,46 +1,53 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
+using DO = OutingAdvisorV2DataObjects;
+using LS = OutingAdvisorv2WebApi.LocationService;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace OutingAdvisorv2WebApi.Controllers
 {
     [Route("api/[controller]")]
-    public class LocationController : Controller
+    [ApiController]
+    public class LocationController : ControllerBase
     {
+        private LS.ILocationService _locationService;
+        public LocationController(LS.ILocationService locationService) {
+            _locationService = locationService;
+        }
         // GET: api/values
         [HttpGet]
-        public IEnumerable<string> Get()
+        public ActionResult<IEnumerable<DO.Location>> Get()
         {
-            return new string[] { "value1", "value2" };
+            return Ok(_locationService.GetAll());
         }
 
         // GET api/values/5
-        [HttpGet("{id}")]
-        public string Get(int id)
+        [HttpGet("{name}")]
+        public ActionResult<DO.Location> Get(string name)
         {
-            return "value";
+            return Ok(_locationService.Get(name));
         }
 
         // POST api/values
         [HttpPost]
-        public void Post([FromBody]string value)
+        public ActionResult<bool> Post([FromBody]DO.Location location)
         {
+            return Ok(_locationService.Update(location));
         }
 
         // PUT api/values/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody]string value)
+        [HttpPut()]
+        public ActionResult<bool> Put([FromBody]DO.Location location)
         {
+            return Ok(_locationService.Insert(location));
         }
 
         // DELETE api/values/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
+        [HttpDelete()]
+        public ActionResult<bool> Delete([FromBody]DO.Location location)
         {
+            return Ok(_locationService.Delete(location));
         }
     }
 }
