@@ -18,11 +18,14 @@ namespace OutingAdvisorV2DataObjects
         public string Name { get; set; }
         public string Description { get; set; }
         [ConcurrencyCheck]
-        public long RowVersion { get; set; }
+        public int RowVersion { get; set; }
 
         void IRowVersionIncrementer.OnSavingChanges()
         {
-            RowVersion ++;
+            if (RowVersion > 2147483647)
+                RowVersion = 1;
+            else
+                RowVersion++;
         }
     }
 }

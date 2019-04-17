@@ -20,17 +20,17 @@ namespace OutingAdvisorV2DataObjects
         public int TypeID { get; set; }
         public string Season { get; set; }
         [ConcurrencyCheck]
-        public long RowVersion { get; set; }
+        public int RowVersion { get; set; }
 
         [ForeignKey("TypeID")]
         public LocationTypeMaster LocationTypeMaster { get; set; }
 
-        [ForeignKey("LocationID")]
-        public Location Location { get; set; }
-
         void IRowVersionIncrementer.OnSavingChanges()
         {
-            RowVersion ++;
+            if (RowVersion > 2147483647)
+                RowVersion = 1;
+            else
+                RowVersion++;
         }
     }
 }

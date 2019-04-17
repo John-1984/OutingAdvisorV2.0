@@ -10,6 +10,8 @@ namespace OutingAdvisorV2DataObjects
     {
         public Location()
         {
+            LocationActivitiesMapper = new HashSet<LocationActivitiesMapper>();
+            LocationPointers = new HashSet<LocationPointers>();
         }
 
         [Key]
@@ -22,15 +24,18 @@ namespace OutingAdvisorV2DataObjects
         public string Longitude { get; set; }
         public bool Approved { get; set; }
         [ConcurrencyCheck]
-        public long RowVersion { get; set; }
+        public int RowVersion { get; set; }
 
         public ICollection<LocationActivitiesMapper> LocationActivitiesMapper { get; set; }
-
+        public ICollection<LocationPointers> LocationPointers { get; set; }
         public LocationDetails LocationDetails { get; set; }
 
         void IRowVersionIncrementer.OnSavingChanges()
         {
-            RowVersion ++;
+            if (RowVersion > 2147483647)
+                RowVersion = 1;
+            else
+                RowVersion++;
         }
     }
 }
