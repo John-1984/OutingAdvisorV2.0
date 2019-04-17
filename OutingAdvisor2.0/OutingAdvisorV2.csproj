@@ -13,6 +13,8 @@
     <Folder Include="wwwroot\images\locationImages\" />
     <Folder Include="Views\Location\" />
     <Folder Include="Properties\PublishProfiles\" />
+    <Folder Include="HttpClientServices\" />
+    <Folder Include="HttpClientServices\LocationServices\" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\images\locationImages\joe-beck-23483-unsplash.jpg" />
@@ -73,5 +75,8 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" Version="2.1.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OutingAdvisorV2DataObjects\OutingAdvisorV2DataObjects.csproj" />
   </ItemGroup>
 </Project>

@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using HttpClients = OutingAdvisorV2.HttpClientServices.LocationServices;
 
 namespace OutingAdvisorV2
 {
@@ -22,6 +23,7 @@ namespace OutingAdvisorV2
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.AddHttpClient<HttpClients.LocationService>("LocationService");
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
