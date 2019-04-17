@@ -10,8 +10,6 @@ namespace OutingAdvisorV2DataLayer.Location
     {
         public LocationDAL() {
             var context = new LocationContext();
-            context.Database.OpenConnection();
-            context.Database.CloseConnection();
         }
 
         bool ILocation.Delete(DO.Location location)
@@ -65,14 +63,20 @@ namespace OutingAdvisorV2DataLayer.Location
             {
                 try
                 {
-                    var test = context.Location;
-                    var test1 = test.AsQueryable().ToString();
                     _result = context.Location
-                                    //.Where(p => p.Approved == true)
-                                    //.Include(p => p.LocationDetails)
-                                    //    .ThenInclude(t => t.LocationTypeMaster)
-                                    //.Include(p => p.LocationActivitiesMapper)
+                                    .Where(p => p.Approved == true)
                                     .ToList();
+
+                    IEnumerable<int> _locationIDs = _result.Select(s => s.Identity).ToList();
+                    context.LocationDetails.Where(p => _locationIDs.Contains(p.LocationID)).Load();
+                    context.LocationActivitiesMapper.Where(p => _locationIDs.Contains(p.LocationID)).Load();
+                    context.LocationPointers.Where(p => _locationIDs.Contains(p.LocationID)).Load();
+
+                    IEnumerable<int> _typeID = _result.Select(s => s.LocationDetails.TypeID).ToList();
+                    IEnumerable<int> _activitiesID = context.LocationActivitiesMapper.Where(p => _locationIDs.Contains(p.LocationID)).Select(s => s.Identity).ToList();
+                    context.LocationTypeMaster.Where(p => _typeID.Contains(p.Identity)).Load();
+                    context.LocationActivitiesMaster.Where(p => _activitiesID.Contains(p.Identity)).Load();
+
                 }
                 catch (Exception ex)
                 {

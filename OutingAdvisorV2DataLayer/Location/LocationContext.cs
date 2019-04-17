@@ -24,5 +24,6 @@ namespace OutingAdvisorV2DataLayer.Location
         public DbSet<DO.LocationActivitiesMaster> LocationActivitiesMaster { get; set; }
         public DbSet<DO.LocationDetails> LocationDetails { get; set; }
         public DbSet<DO.LocationTypeMaster> LocationTypeMaster { get; set; }
+        public DbSet<DO.LocationPointers> LocationPointers { get; set; }
     }
 }
