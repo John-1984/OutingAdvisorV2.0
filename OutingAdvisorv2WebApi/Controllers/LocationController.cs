@@ -1,5 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 using DO = OutingAdvisorV2DataObjects;
 using LS = OutingAdvisorv2WebApi.LocationService;
 
@@ -24,11 +27,12 @@ namespace OutingAdvisorv2WebApi.Controllers
 
         // GET api/values/5
         [HttpGet("{name}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
         public ActionResult<DO.Location> Get(string name)
         {
             return Ok(_locationService.Get(name));
         }
-
+         
         // POST api/values
         [HttpPost]
         public ActionResult<bool> Post([FromBody]DO.Location location)
@@ -45,7 +49,7 @@ namespace OutingAdvisorv2WebApi.Controllers
 
         // DELETE api/values/5
         [HttpDelete()]
-        public ActionResult<bool> Delete([FromBody]DO.Location location)
+        public ActionResult<bool> Delete([FromRoute]DO.Location location)
         {
             return Ok(_locationService.Delete(location));
         }
